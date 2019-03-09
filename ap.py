@@ -127,7 +127,6 @@ class Inspector:
         return ' ' * (self.indentator.indentation - self.indentator.indent_width)
 
     def awesomize(self, object):
-        # if isinstance(object, str):
         return self.formatter.format(object)
 
 
