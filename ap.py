@@ -45,10 +45,8 @@ class Indentator:
 
     def increase_indentation(self, func):
         self.indentation += self.indent_width
-        print("**increase indentation**")
         result = func()
         self.indentation -= self.indent_width
-        print("**decrease indentation**")
         return result
 
 # indentator = Indentator(4)
@@ -110,7 +108,12 @@ class Formatter:
 
 
 class Inspector:
-    def __init__(self):
+    DEFAULT_OPTIONS = {
+        'sort_keys': False, # Do not sort hash keys
+    }
+
+    def __init__(self, options = {}):
+        self.options = { **self.DEFAULT_OPTIONS, **options }
         self.formatter = Formatter(self)
         self.indentator = Indentator()
 
@@ -184,8 +187,9 @@ class DictFormatter(BaseFormatter):
         [[colorize('a'), 'va'], [colorize('c'), 'vc'], [colorize('b'), { 'd': 'vd' }]]
         """
         keys = self.object.keys()
-        sorted_keys = sorted(keys) # TODO: Make this optional
-        return [[self.colorize(key, None), self.object[key]] for key in sorted_keys]
+        if self.inspector.options['sort_keys']:
+            keys = sorted(keys)
+        return [[self.colorize(key, None), self.object[key]] for key in keys]
 
     def left_width(self, data):
         """
@@ -212,10 +216,10 @@ class DictFormatter(BaseFormatter):
         return max_key_width + self.inspector.indentation()
 
 
-def ap(obj):
-    inspector = Inspector()
-    awesome_output = inspector.awesomize(obj)
-    return awesome_output
+def ap(object, options = {}):
+    inspector = Inspector(options)
+    awesome_output = inspector.awesomize(object)
+    print(awesome_output)
 
 user = {
     'email': 'ghopper@gmail.com',
@@ -251,4 +255,5 @@ simple = {
     'bar': 'bar',
 }
 
-print(ap(user))
+ap(user)
+# ap(user, { 'sort_keys': True })
