@@ -15,9 +15,9 @@ class Colorize:
     # - Make this configurable
     # - Exhaustive
     COLOR_BY_TYPE = {
-        'str': Fore.GREEN,
+        'str': Fore.YELLOW,
         'list': Fore.BLUE,
-        'tuple': Fore.YELLOW,
+        'tuple': Fore.GREEN,
     }
 
     def __init__(self):
@@ -94,7 +94,9 @@ class Formatter:
         """
         Entry point to format an object.
         """
-        if isinstance(object, dict):
+        if hasattr(object, '__dict__'):
+            return self.format_object(object)
+        elif isinstance(object, dict):
             return self.format_dict(object)
         elif isinstance(object, list):
             return self.format_list(object)
@@ -109,6 +111,9 @@ class Formatter:
 
     def format_list(self, object):
         return ListFormatter(object, self.inspector).format()
+
+    def format_object(self, object):
+        return ObjectFormatter(object, self.inspector).format()
 
 class Inspector:
     DEFAULT_OPTIONS = {
@@ -272,6 +277,17 @@ class DictFormatter(BaseFormatter):
         """
         max_key_width = max([len(datum[0]) for datum in data])
         return max_key_width + self.inspector.indentation()
+
+
+class ObjectFormatter(BaseFormatter):
+    def __init__(self, object, inspector):
+        self.object = object
+        self.inspector = inspector
+
+    def format(self):
+        attributes = self.object.__dict__
+        printable_attributes = [self.colorize('self.', None) + self.colorize(key, 'str') + self.colorize('=', None) + self.colorize(value, 'str') for key, value in attributes.items()]
+        return '{0} {1}'.format(self.colorize(self.object, None), ', '.join(printable_attributes))
 
 
 def ap(object, options = {}):

@@ -40,6 +40,14 @@ simple_list_1 = ['foo', 'bar', 'baz']
 simple_list_2 = [1, 2, 3]
 complex_list = ['foo', 'bar', 1, 2, simple_dict, complex_dict]
 
+class SimpleObject:
+    def __init__(self):
+        self.foo = 'foo'
+        self.bar = ['foo', 'bar', 1, 2, { 'foo': 1, 'bar': 2 }]
+        self.baz = { 'foo': 1, 'bar': 2, 'baz': ['foo', 'bar', 1, 2] }
+
+simple_object = SimpleObject()
+
 print("String")
 ap(string)
 print("Dict (Complex)")
@@ -56,3 +64,5 @@ print("List (Simple 2)")
 ap(simple_list_2)
 print("List (Complex)")
 ap(complex_list)
+print("Object (Simple)")
+ap(simple_object)
