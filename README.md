@@ -2,6 +2,17 @@
 
 It's an attempt to port the Ruby's [awesome_print](https://github.com/awesome-print/awesome_print) to Python.
 
+## Usage
+
+```python
+from ap import ap
+
+ap(object, options = {})
+
+# Options:
+# sort_keys - boolean, default is False
+```
+
 ## Contributing
 
 0. Fork & clone the repository
