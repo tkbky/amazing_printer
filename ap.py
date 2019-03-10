@@ -1,5 +1,4 @@
 from colorama import init, Fore
-init()
 
 class Colorize:
     """
@@ -216,43 +215,7 @@ class DictFormatter(BaseFormatter):
 
 
 def ap(object, options = {}):
+    init(autoreset = True)
     inspector = Inspector(options)
     awesome_output = inspector.awesomize(object)
     print(awesome_output)
-
-user = {
-    'email': 'ghopper@gmail.com',
-    'first_name': 'grace',
-    'last_name': 'hopper',
-    'address': {
-        'line_1': '1 Hacker Way',
-        'line_2': '#1-3-3-7',
-        'postal_code': '54321',
-        'city': 'L.A',
-        'state': 'S.F',
-        'country': 'United States of America'
-    },
-    'deeply': {
-        'nested': {
-            'dict': {
-                'that': {
-                    'you': {
-                        'can': {
-                            'never': {
-                                'imagine': [],
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-simple = {
-    'foo': None,
-    'bar': 'bar',
-}
-
-ap(user)
-# ap(user, { 'sort_keys': True })
