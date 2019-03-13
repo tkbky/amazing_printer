@@ -38,3 +38,21 @@ $ source env/bin/activate.fish
 ```
 
 3. Make your awesome changes & pull request.
+
+## Coverage
+
+1. Install Coverage.py
+
+```sh
+pip install coverage
+```
+
+2. Run coverage on tests.
+```sh
+$ coverage run *_test.py
+```
+
+3. Get the coverage report.
+```sh
+$ coverage report
+```
