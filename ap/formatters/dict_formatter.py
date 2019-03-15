@@ -1,4 +1,4 @@
-from formatters.base_formatter import BaseFormatter
+from .base_formatter import BaseFormatter
 
 
 class DictFormatter(BaseFormatter):

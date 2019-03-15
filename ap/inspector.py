@@ -1,5 +1,5 @@
-from indentator import Indentator
-from formatter import Formatter
+from .indentator import Indentator
+from .formatter import Formatter
 
 
 class Inspector:

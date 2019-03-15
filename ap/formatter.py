@@ -1,7 +1,7 @@
-from formatters.dict_formatter import DictFormatter
-from formatters.list_formatter import ListFormatter
-from formatters.object_formatter import ObjectFormatter
-from formatters.simple_formatter import SimpleFormatter
+from .formatters.dict_formatter import DictFormatter
+from .formatters.list_formatter import ListFormatter
+from .formatters.object_formatter import ObjectFormatter
+from .formatters.simple_formatter import SimpleFormatter
 
 
 class Formatter:

@@ -1,6 +1,6 @@
 import unittest
 
-from indentator import Indentator
+from .indentator import Indentator
 
 
 class TestIndentator(unittest.TestCase):

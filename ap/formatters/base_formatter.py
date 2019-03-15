@@ -1,4 +1,4 @@
-from colorize import Colorize
+from ..colorize import Colorize
 
 class BaseFormatter(Colorize):
     def __init__(self):

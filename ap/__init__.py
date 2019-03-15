@@ -1,5 +1,5 @@
 from colorama import init
-from inspector import Inspector
+from .inspector import Inspector
 
 
 def ap(object, options = {}):
