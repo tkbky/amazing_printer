@@ -16,6 +16,12 @@ setuptools.setup(
     install_requires=[
         'colorama==0.4.1',
     ],
+    setup_requires=[
+        'pytest-runner',
+    ],
+    tests_require=[
+        'pytest>=2.8.0',
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

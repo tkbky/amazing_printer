@@ -1,6 +1,6 @@
 import unittest
 
-from .indentator import Indentator
+from ..indentator import Indentator
 
 
 class TestIndentator(unittest.TestCase):
@@ -16,5 +16,3 @@ class TestIndentator(unittest.TestCase):
         indentator.increase_indentation(func)
         # after increase indentation
         self.assertEqual(indentator.indentation, current_indentation)
-
-unittest.main()
