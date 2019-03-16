@@ -45,3 +45,9 @@ python setup.py test
 ```
 
 5. Make your pull request
+
+## License
+
+Copyright (c) 2019 Kher Yee, Ting
+
+Released under the MIT license. See [LICENSE](LICENSE) file for details.
