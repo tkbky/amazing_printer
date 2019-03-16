@@ -1,2 +1,10 @@
+[paths]
+source = ap
+
 [run]
 branch = True
+source = ap
+
+[report]
+show_missing = true
+precision = 2

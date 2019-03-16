@@ -14,13 +14,14 @@ setuptools.setup(
     url="https://github.com/tkbky/ap",
     packages=setuptools.find_packages(),
     install_requires=[
-        'colorama==0.4.1',
+        'colorama>=0.4.0',
     ],
     setup_requires=[
         'pytest-runner',
     ],
     tests_require=[
-        'pytest>=2.8.0',
+        'pytest>=4.3.0',
+        'pytest-cov>=2.6.0'
     ],
     classifiers=[
         "Programming Language :: Python :: 3",

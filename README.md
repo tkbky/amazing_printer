@@ -37,22 +37,11 @@ $ source env/bin/activate.fish
 (env) $ pip install -r requirements.txt
 ```
 
-3. Make your awesome changes & pull request.
+3. Make your awesome changes
 
-## Coverage
-
-1. Install Coverage.py
-
+4. Run test and coverage
 ```sh
-pip install coverage
+python setup.py test
 ```
 
-2. Run coverage on tests.
-```sh
-$ coverage run *_test.py
-```
-
-3. Get the coverage report.
-```sh
-$ coverage report
-```
+5. Make your pull request
