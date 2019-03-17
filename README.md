@@ -10,7 +10,8 @@ from ap import ap
 ap(object, options = {})
 
 # Options:
-# sort_keys - boolean, default is False
+# sort_keys - boolean, set to sort the dictionary keys, default is False
+# indent - integer, set the width of indentation, default is 4 spaces
 ```
 
 ## Contributing
@@ -34,14 +35,14 @@ $ source env/bin/activate.fish
 
 2. Install dependencies
 ```sh
-(env) $ pip install -r requirements.txt
+(env) $ pip install -r requirements.txt dev-requirements.txt
 ```
 
 3. Make your awesome changes
 
 4. Run test and coverage
 ```sh
-python setup.py test
+pytest
 ```
 
 5. Make your pull request
