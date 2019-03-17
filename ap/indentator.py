@@ -11,10 +11,3 @@ class Indentator:
         result = func()
         self.indentation -= self.indent_width
         return result
-
-# indentator = Indentator(4)
-# print('*' * indentator.indentation)
-# def foo():
-#     print('hello world')
-# indentator.increase_indentation(foo)
-# print('*' * indentator.indentation)

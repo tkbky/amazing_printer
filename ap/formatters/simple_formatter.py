@@ -11,13 +11,3 @@ class SimpleFormatter(BaseFormatter):
         if isinstance(self.object, str):
             out = '\"{}\"'.format(out)
         return self.colorize(out, self.type)
-
-# objs = [
-#     'this is a string',
-#     {'foo': 'bar'},
-#     (1, 2),
-#     ['hello', 'world']
-# ]
-# for o in objs:
-#     sf = SimpleFormatter(o, type(o).__name__)
-#     print(sf.format())
