@@ -10,8 +10,9 @@ from ap import ap
 ap(object, options = {})
 
 # Options:
-# sort_keys - boolean, set to sort the dictionary keys, default is False
-# indent - integer, set the width of indentation, default is 4 spaces
+# sort_keys - boolean, set to sort the dictionary keys, default is False.
+# indent - integer, set the width of indentation, default is 4 spaces.
+# multiple_lines - boolean, set to print the fields for dict or list in multiple lines, default is True.
 ```
 
 ## Contributing
