@@ -6,6 +6,7 @@ class Inspector:
     DEFAULT_OPTIONS = {
         'sort_keys': False, # Do not sort hash keys
         'indent': 4, # 4 spaces
+        'multiple_lines': True, # span fields inside a dict or an array into multiple lines
     }
 
     def __init__(self, options = {}, indentator = None):

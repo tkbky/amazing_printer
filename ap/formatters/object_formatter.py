@@ -8,5 +8,23 @@ class ObjectFormatter(BaseFormatter):
 
     def format(self):
         attributes = self.object.__dict__
-        printable_attributes = [self.colorize('self.', None) + self.colorize(key, 'str') + self.colorize('=', None) + self.colorize(value, 'str') for key, value in attributes.items()]
-        return '{0} {1}'.format(self.colorize(self.object, None), ', '.join(printable_attributes))
+        single_line_attributes = self.single_line_attributes(
+            self.printable_attributes,
+            attributes
+        )
+        return '{0} {1}'.format(self.colorize(self.object, None), ', '.join(single_line_attributes))
+
+    def printable_attributes(self, key, value):
+        return self.colorize('self.', None) + \
+            self.colorize(key, 'str') + \
+            self.colorize('=', None) + \
+            self.inspector.awesomize(value)
+
+    def single_line_attributes(self, func, attributes):
+        multiple_lines = self.inspector.options['multiple_lines']
+        self.inspector.options['multiple_lines'] = False
+        result = [
+             func(key, value) for key, value in attributes.items()
+        ]
+        self.inspector.options['multiple_lines'] = multiple_lines
+        return result

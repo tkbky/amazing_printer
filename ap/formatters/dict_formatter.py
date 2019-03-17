@@ -9,13 +9,17 @@ class DictFormatter(BaseFormatter):
     def format(self):
         if len(self.object) == 0:
             return '{}'
+        elif self.single_line():
+            return self.single_line_dict()
         else:
-            return self.awesome_dict()
+            return self.multiple_lines_dict()
 
-    def awesome_dict(self):
-        """
-        return an awesome dict.
-        """
+    def single_line_dict(self):
+        dict = self.printable_dict()
+        return self.colorize('{', None) + \
+            ', '.join(dict) + self.colorize('}', None)
+
+    def multiple_lines_dict(self):
         dict = self.printable_dict()
         return self.colorize('{\n', None) + \
             ',\n'.join(dict) + '\n' + \
@@ -82,5 +86,7 @@ class DictFormatter(BaseFormatter):
         }
         in this case, left width = (1 * 4) + 9 = 13
         """
+        if self.single_line():
+            return 0
         max_key_width = max([len(datum[0]) for datum in data])
         return max_key_width + self.inspector.indentation()
