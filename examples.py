@@ -34,7 +34,9 @@ simple_dict = {
     'bar': 'bar',
 }
 
-string = 'The quick brown fox jumps over the lazy dog'
+aString = 'The quick brown fox jumps over the lazy dog'
+aTuple = (1, 2)
+aNone = None
 
 simple_list_1 = ['foo', 'bar', 'baz']
 simple_list_2 = [1, 2, 3]
@@ -43,13 +45,18 @@ complex_list = ['foo', 'bar', 1, 2, simple_dict, complex_dict]
 class SimpleObject:
     def __init__(self):
         self.foo = 'foo'
-        self.bar = ['foo', 'bar', 1, 2, { 'foo': 1, 'bar': 2 }]
-        self.baz = { 'foo': 1, 'bar': 2, 'baz': ['foo', 'bar', 1, 2] }
+        self.bar = ['foo', 'bar', 1, 2, { 'foo': 1, 'bar': 2 }, None]
+        self.baz = { 'foo': 1, 'bar': 2, 'baz': ['foo', 'bar', 1, 2], 'foobar': None }
+        self.foobar = (1, 2)
 
 simple_object = SimpleObject()
 
 print("String")
-ap(string)
+ap(aString)
+print("Tuple")
+ap(aTuple)
+print("None")
+ap(aNone)
 print("Dict (Complex)")
 ap(complex_dict)
 print("Dict (Complex, Sort keys)")
