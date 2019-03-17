@@ -43,7 +43,7 @@ $ source env/bin/activate.fish
 
 4. Run test and coverage
 ```sh
-pytest
+(env) $ pytest
 ```
 
 5. Make your pull request
