@@ -73,3 +73,13 @@ print("List (Complex)")
 ap(complex_list)
 print("Object (Simple)")
 ap(simple_object)
+print("Custom colors [Before]")
+ap(simple_object)
+print("Custom colors [After]")
+color = {
+    'str': 'red',
+    'list': 'green',
+    'tuple': 'blue',
+    'none': 'yellow',
+}
+ap(simple_object, options = { 'color': color })

@@ -13,6 +13,14 @@ ap(object, options = {})
 # sort_keys - boolean, set to sort the dictionary keys, default is False.
 # indent - integer, set the width of indentation, default is 4 spaces.
 # multiple_lines - boolean, set to print the fields for dict or list in multiple lines, default is True.
+# color - dict, set the color for different literals, default is
+# {
+#     'str': 'yellow',
+#     'list': 'blue',
+#     'tuple': 'green',
+#     'none': 'red',
+# }
+# supported colors: 'yellow', 'blue', 'green', 'red'
 ```
 
 ## Contributing

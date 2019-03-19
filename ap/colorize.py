@@ -14,11 +14,18 @@ class Colorize:
     # TODO:
     # - Make this configurable
     # - Exhaustive
-    COLOR_BY_TYPE = {
-        'str': Fore.YELLOW,
-        'list': Fore.BLUE,
-        'tuple': Fore.GREEN,
-        'none': Fore.RED,
+    TYPE_TO_COLOR = {
+        'str': 'yellow',
+        'list': 'blue',
+        'tuple': 'green',
+        'none': 'red',
+    }
+
+    COLOR_TO_COLORAMA = {
+        'yellow': Fore.YELLOW,
+        'blue': Fore.BLUE,
+        'green': Fore.GREEN,
+        'red': Fore.RED,
     }
 
     def __init__(self):
@@ -31,7 +38,8 @@ class Colorize:
         :param str str: The string to be colorized
         :param str type: The type of what the str originally is, use type(obj).__name__
         """
+        colors = self.inspector.options.get('color', Colorize.TYPE_TO_COLOR)
         if type == 'NoneType':
             type = 'none'
-        color = Colorize.COLOR_BY_TYPE.get(type, Fore.RESET)
+        color = Colorize.COLOR_TO_COLORAMA.get(colors.get(type), Fore.RESET)
         return '{0}{1}'.format(color, str)

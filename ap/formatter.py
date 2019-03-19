@@ -25,7 +25,7 @@ class Formatter:
             return self.format_str(object)
 
     def format_str(self, object):
-        return SimpleFormatter(object, type(object).__name__).format()
+        return SimpleFormatter(object, self.inspector).format()
 
     def format_dict(self, object):
         return DictFormatter(object, self.inspector).format()
