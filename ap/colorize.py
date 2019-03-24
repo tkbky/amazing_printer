@@ -28,9 +28,6 @@ class Colorize:
         'red': Fore.RED,
     }
 
-    def __init__(self):
-        raise "This is a mixin. Can't be initialized."
-
     def colorize(self, str, type):
         """
         Return a string with color info
