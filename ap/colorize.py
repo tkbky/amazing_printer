@@ -11,9 +11,6 @@ class Colorize:
     - Style: DIM, NORMAL, BRIGHT, RESET_ALL
     """
 
-    # TODO:
-    # - Make this configurable
-    # - Exhaustive
     TYPE_TO_COLOR = {
         'str': 'yellow',
         'list': 'blue',
