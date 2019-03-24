@@ -20,7 +20,7 @@ ap(object, options = {})
 #     'tuple': 'green',
 #     'none': 'red',
 # }
-# supported colors: 'yellow', 'blue', 'green', 'red'
+# supported colors: 'yellow', 'blue', 'green', 'red', 'black', 'magenta', 'cyan', 'white'
 ```
 
 ## Contributing

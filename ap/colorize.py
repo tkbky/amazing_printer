@@ -23,6 +23,10 @@ class Colorize:
         'blue': Fore.BLUE,
         'green': Fore.GREEN,
         'red': Fore.RED,
+        'black': Fore.BLACK,
+        'magenta': Fore.MAGENTA,
+        'cyan': Fore.CYAN,
+        'white': Fore.WHITE,
     }
 
     def colorize(self, str, type):
