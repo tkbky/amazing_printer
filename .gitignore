@@ -5,3 +5,4 @@ dist/
 build/
 ap.egg-info/
 .eggs
+.tox
