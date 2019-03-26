@@ -55,9 +55,17 @@ $ source env/bin/activate.fish
 (env) $ pytest
 # Run test with coverage report
 (env) $ pytest --cov=ap ap/tests/
+# Run specific test
+(env) $ pytest -k "TestFormatter"
 ```
 
-5. Make your pull request
+5. Run test for multiple environments
+Make sure you have installed multiple versions of Python. Recommended way of managing Python version using [Pyenv](https://github.com/pyenv/pyenv)
+```sh
+(env) $ tox
+```
+
+6. Make your pull request
 
 ## License
 
