@@ -51,7 +51,10 @@ $ source env/bin/activate.fish
 
 4. Run test and coverage
 ```sh
+# Run test
 (env) $ pytest
+# Run test with coverage report
+(env) $ pytest --cov=ap ap/tests/
 ```
 
 5. Make your pull request
