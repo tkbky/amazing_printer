@@ -83,3 +83,8 @@ color = {
     'none': 'yellow',
 }
 ap(simple_object, options = { 'color': color })
+
+# Special collections
+from collections import OrderedDict
+ordered_dict = OrderedDict(simple_dict)
+ap(ordered_dict)

@@ -1,5 +1,7 @@
 import unittest
 
+from collections import OrderedDict
+
 from ..formatter import Formatter
 from ..inspector import Inspector
 
@@ -35,6 +37,19 @@ class TestFormatter(unittest.TestCase):
     \x1b[39mkey_2\x1b[39m: \x1b[33m"value_2",
     \x1b[39mkey_3\x1b[39m: \x1b[33m"value_3"
 \x1b[39m}"""
+        self.assertEqual(self.formatter.format(object), expect)
+
+    def test_ordered_dict_formatter(self):
+        object = OrderedDict({
+            'key_1': 'value_1',
+            'key_2': 'value_2',
+            'key_3': 'value_3',
+        })
+        expect ="""\x1b[39mOrderedDict(\x1b[39m{
+    \x1b[39mkey_1\x1b[39m: \x1b[33m"value_1",
+    \x1b[39mkey_2\x1b[39m: \x1b[33m"value_2",
+    \x1b[39mkey_3\x1b[39m: \x1b[33m"value_3"
+\x1b[39m}\x1b[39m)"""
         self.assertEqual(self.formatter.format(object), expect)
 
     def test_list_formatter(self):
