@@ -88,3 +88,8 @@ ap(simple_object, options = { 'color': color })
 from collections import OrderedDict
 ordered_dict = OrderedDict(simple_dict)
 ap(ordered_dict)
+
+simple_set_1 = set(simple_list_1)
+ap(simple_set_1)
+simple_set_2 = set(simple_list_2)
+ap(simple_set_2)
