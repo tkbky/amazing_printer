@@ -2,6 +2,12 @@
 
 It's an attempt to port the Ruby's [awesome_print](https://github.com/awesome-print/awesome_print) to Python.
 
+## Install
+
+```sh
+pip install amazing-printer
+```
+
 ## Usage
 
 ```python
