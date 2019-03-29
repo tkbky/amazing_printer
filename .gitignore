@@ -7,3 +7,4 @@ build/
 ap.egg-info/
 .eggs
 .tox
+.pytest_cache
