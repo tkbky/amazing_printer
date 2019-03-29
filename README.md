@@ -37,9 +37,8 @@ $ git clone git@github.com:<your-github-handle>/amazing_printer.git
 $ cd amazing_printer
 ```
 
-1. Create a virtual environment and activate it
+1. Create a virtual environment and activate it'
 This project uses [Pipenv](https://github.com/pypa/pipenv). Follow the instruction [here](https://github.com/pypa/pipenv) to install.
-
 ```sh
 $ pipenv shell --three
 ```
