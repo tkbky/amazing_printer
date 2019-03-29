@@ -93,3 +93,6 @@ simple_set_1 = set(simple_list_1)
 ap(simple_set_1)
 simple_set_2 = set(simple_list_2)
 ap(simple_set_2)
+
+simple_tuple_1 = tuple(simple_list_1)
+ap(simple_tuple_1)
