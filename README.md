@@ -32,19 +32,16 @@ $ cd ap
 ```
 
 1. Create a virtual environment and activate it
+This project uses [Pipenv](https://github.com/pypa/pipenv). Follow the instruction [here](https://github.com/pypa/pipenv) to install.
+
 ```sh
-$ python -m venv env
-
-# bash shell
-$ source env/bin/activate
-
-# fish shell
-$ source env/bin/activate.fish
+$ pipenv shell --three
 ```
 
 2. Install dependencies
 ```sh
-(env) $ pip install -r requirements.txt dev-requirements.txt
+# Install dependencies for development purpose.
+$ pipenv install --dev
 ```
 
 3. Make your awesome changes
