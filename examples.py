@@ -1,4 +1,4 @@
-from ap import ap
+from amazing_printer import ap
 
 complex_dict = {
     'email': 'ghopper@gmail.com',

@@ -1,9 +1,9 @@
 [paths]
-source = ap
+source = amazing_printer
 
 [run]
 branch = True
-source = ap
+source = amazing_printer
 
 [report]
 show_missing = true

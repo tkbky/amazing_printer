@@ -4,7 +4,7 @@ __pycache__/
 .coverage
 dist/
 build/
-ap.egg-info/
+*.egg-info/
 .eggs
 .tox
 .pytest_cache

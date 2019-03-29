@@ -1,11 +1,11 @@
-## ap
+## Amazing Printer
 
 It's an attempt to port the Ruby's [awesome_print](https://github.com/awesome-print/awesome_print) to Python.
 
 ## Usage
 
 ```python
-from ap import ap
+from amazing_printer import ap
 
 ap(object, options = {})
 
@@ -27,8 +27,8 @@ ap(object, options = {})
 
 0. Fork & clone the repository
 ```sh
-$ git clone git@github.com:<your-github-handle>/ap.git
-$ cd ap
+$ git clone git@github.com:<your-github-handle>/amazing_printer.git
+$ cd amazing_printer
 ```
 
 1. Create a virtual environment and activate it
@@ -51,7 +51,7 @@ $ pipenv install --dev
 # Run test
 (env) $ pytest
 # Run test with coverage report
-(env) $ pytest --cov=ap ap/tests/
+(env) $ pytest --cov=amazing_printer amazing_printer/tests/
 # Run specific test
 (env) $ pytest -k "TestFormatter"
 ```
