@@ -34,9 +34,9 @@ simple_dict = {
     'bar': 'bar',
 }
 
-aString = 'The quick brown fox jumps over the lazy dog'
-aTuple = (1, 2)
-aNone = None
+simple_string = 'The quick brown fox jumps over the lazy dog'
+simple_tuple = (1, 2)
+none = None
 
 simple_list_1 = ['foo', 'bar', 'baz']
 simple_list_2 = [1, 2, 3]
@@ -52,11 +52,11 @@ class SimpleObject:
 simple_object = SimpleObject()
 
 print("String")
-ap(aString)
+ap(simple_string)
 print("Tuple")
-ap(aTuple)
+ap(simple_tuple)
 print("None")
-ap(aNone)
+ap(none)
 print("Dict (Complex)")
 ap(complex_dict)
 print("Dict (Complex, Sort keys)")
