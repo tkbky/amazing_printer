@@ -1,0 +1,20 @@
+language: python
+# install dependencies
+install:
+  - make
+# run tests
+script:
+  - make ci
+cache: pip
+jobs:
+  include:
+    - stage: test
+      script:
+        - make ci
+      python: '3.6'
+  include:
+    - stage: test
+      script:
+        - make ci
+      python: '3.7'
+      dist: 'xenial'
