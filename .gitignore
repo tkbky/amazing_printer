@@ -8,3 +8,4 @@ build/
 .eggs
 .tox
 .pytest_cache
+coverage.xml

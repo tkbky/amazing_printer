@@ -12,9 +12,14 @@ jobs:
       script:
         - make ci
       python: '3.6'
-  include:
     - stage: test
       script:
         - make ci
       python: '3.7'
-      dist: 'xenial'
+      dist: xenial
+    - stage: coverage
+      script:
+        - make coverage
+        - codecov
+      python: '3.7'
+      dist: xenial
