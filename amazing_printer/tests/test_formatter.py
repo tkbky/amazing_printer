@@ -55,9 +55,9 @@ class TestFormatter(unittest.TestCase):
     def test_list_formatter(self):
         object = ['item_1a', 'item_1b', 'item_1c']
         expect = """\x1b[39m[
-        \x1b[34m[0] \x1b[33m"item_1a",
-        \x1b[34m[1] \x1b[33m"item_1b",
-        \x1b[34m[2] \x1b[33m"item_1c"
+    \x1b[34m[0] \x1b[33m"item_1a",
+    \x1b[34m[1] \x1b[33m"item_1b",
+    \x1b[34m[2] \x1b[33m"item_1c"
 \x1b[39m]"""
         self.assertEqual(self.formatter.format(object), expect)
 

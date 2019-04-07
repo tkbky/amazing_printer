@@ -15,7 +15,7 @@ class ListFormatter(BaseFormatter):
             return self.multiple_lines_list()
 
     def single_line_list(self):
-        list = self.printable_list(with_prefix = False)
+        list = self.printable_list()
         return self.colorize('[', None) + \
             ', '.join(list) + \
             self.colorize(']', None)
@@ -29,18 +29,17 @@ class ListFormatter(BaseFormatter):
 
     def printable_list(self, with_prefix = True):
         data = self.object
-        width = self.left_width(data)
-        return [
-            self.inspector.increase_indentation(
-                lambda: self.build_colorized_list(index, datum, width, with_prefix=with_prefix)
-            ) for index, datum in enumerate(data)
-        ]
+        list = []
+        for index, datum in enumerate(data):
+            width = self.left_width(data)
+            prefix = self.list_prefix(index, width) if with_prefix else self.inspector.indent()
+            list.append(self.inspector.increase_indentation(
+                lambda: self.build_colorized_list(datum, prefix)
+            ))
+        return list
 
-    def build_colorized_list(self, index, datum, width, with_prefix = True):
-        if with_prefix:
-            return '{0}{1}'.format(self.list_prefix(index, width), self.inspector.awesomize(datum))
-        else:
-            return self.inspector.awesomize(datum)
+    def build_colorized_list(self, datum, prefix):
+        return '{0}{1}'.format(prefix, self.inspector.awesomize(datum))
 
     def left_width(self, data):
         """
