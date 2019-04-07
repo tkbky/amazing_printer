@@ -6,6 +6,7 @@ class Inspector:
     DEFAULT_OPTIONS = {
         'sort_keys': False, # Do not sort hash keys
         'indent': 4, # 4 spaces
+        'index': True, # Show list indices
         'multiple_lines': True, # Span fields inside a dict or an array into multiple lines,
         'color': {
             'str': 'yellow',

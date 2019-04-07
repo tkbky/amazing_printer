@@ -15,13 +15,13 @@ class ListFormatter(BaseFormatter):
             return self.multiple_lines_list()
 
     def single_line_list(self):
-        list = self.printable_list()
+        list = self.printable_list(self.inspector.options['index'])
         return self.colorize('[', None) + \
             ', '.join(list) + \
             self.colorize(']', None)
 
     def multiple_lines_list(self):
-        list = self.printable_list()
+        list = self.printable_list(self.inspector.options['index'])
         return self.colorize('[\n', None) + \
             ',\n'.join(list) + '\n' + \
             self.inspector.outdent() + \
