@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="amazing_printer",
-    version="0.0.1",
+    version="0.1.0",
     author="Kher Yee, Ting",
     author_email="infcurious@gmail.com",
     description="A python package that pretty prints Python objects with colors and proper indentation.",
