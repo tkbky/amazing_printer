@@ -33,6 +33,40 @@ ap(object, options = {})
 # supported colors: 'yellow', 'blue', 'green', 'red', 'black', 'magenta', 'cyan', 'white'
 ```
 
+### Global Configuration
+
+There are 2 ways to configure amazing printer globally.
+
+1. Inside the code.
+
+    ```python
+    from amazing_printer import configure
+
+    options = {
+        "indent": 8,
+    }
+
+    configure(options)
+    ```
+
+2. From a config file.
+
+    Name the config file as `.amazing_printer.yml` and place it inside the directory the python console is invoked or just your home directory (`~`).
+
+    Example of the config file.
+
+    ```yml
+    sort_keys: false
+    indent: 4
+    index: true
+    multiple_lines: true
+    color:
+      str: "red"
+      list: "green"
+      tuple: "blue"
+      none: "yellow"
+    ```
+
 ## Contributing
 
 0. Fork & clone the repository
