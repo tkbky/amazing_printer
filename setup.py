@@ -15,6 +15,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     install_requires=[
         'colorama>=0.4.0',
+        'pyyaml>=5.1.1'
     ],
     setup_requires=[
         'pytest-runner',
