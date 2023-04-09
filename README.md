@@ -1,6 +1,6 @@
 ## Amazing Printer
 
-![Build Status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![Build Status](https://github.com/tkbky/amazing_printer/actions/workflows/ci.yml/badge.svg)
  [![codecov](https://codecov.io/gh/tkbky/amazing_printer/branch/master/graph/badge.svg)](https://codecov.io/gh/tkbky/amazing_printer) [![image](https://img.shields.io/pypi/v/amazing_printer.svg)](https://pypi.org/project/amazing_printer/)
 
 It's an attempt to port the Ruby's [awesome_print](https://github.com/awesome-print/awesome_print) to Python.
